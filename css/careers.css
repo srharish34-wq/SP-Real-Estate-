@@ -1,0 +1,243 @@
+/* ===== CAREERS PAGE — extends style.css design tokens ===== */
+
+/* ===== PAGE BANNER (shared pattern with about.css) ===== */
+.page-banner{
+  background-size:cover;
+  background-position:center;
+  min-height:340px;
+  display:flex;
+  align-items:center;
+}
+.page-banner-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:70px 24px 50px;
+  width:100%;
+}
+.page-banner .eyebrow{ justify-content:flex-start; }
+.page-banner h1{
+  font-size:2.6rem;
+  color:var(--white);
+  margin-bottom:18px;
+}
+.page-banner h1 em{ color:var(--gold-light); font-style:italic; }
+.breadcrumb{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#e9dcc9;
+  font-size:.9rem;
+}
+.breadcrumb a{ color:var(--gold-light); font-weight:500; }
+.breadcrumb i{ font-size:.65rem; color:#e9dcc9; }
+.breadcrumb span{ color:#f1e6d3; }
+
+/* ===== WHY WORK WITH US ===== */
+.why-work{ padding:96px 0; }
+.why-work-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.why-work-image{ position:relative; }
+.why-work-image img{
+  width:100%;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  display:block;
+}
+.why-work-badge{
+  position:absolute;
+  bottom:-22px;
+  left:-22px;
+  background:var(--maroon);
+  color:var(--gold-light);
+  width:96px; height:96px;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:.8rem;
+  font-weight:600;
+  box-shadow:var(--shadow);
+}
+.why-work-badge i{ font-size:1.3rem; margin-bottom:6px; }
+.why-work-content .lead{
+  font-size:1.1rem;
+  color:var(--maroon-dark);
+  font-weight:500;
+  margin-bottom:16px;
+}
+.why-work-content p{ color:var(--text-muted); margin-bottom:16px; }
+
+/* ===== PERKS / BENEFITS ===== */
+.perks{ padding:96px 0; background:var(--cream); }
+.perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:50px; }
+.perk-card{
+  background:var(--white);
+  text-align:center;
+  padding:36px 24px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  transition:.3s;
+  opacity:0;
+  transform:translateY(24px);
+}
+.perk-card.in-view{ opacity:1; transform:translateY(0); }
+.perk-card:hover{ box-shadow:var(--shadow); border-color:transparent; transform:translateY(-4px); }
+.perk-card i{ font-size:1.7rem; color:var(--maroon); margin-bottom:16px; }
+.perk-card h4{ font-size:1.05rem; color:var(--maroon-dark); margin-bottom:10px; }
+.perk-card p{ color:var(--text-muted); font-size:.9rem; }
+
+/* ===== OPEN POSITIONS ===== */
+.openings{ padding:96px 0; }
+.jobs-list{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-top:50px;
+}
+.job-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:4px solid var(--gold);
+  border-radius:14px;
+  padding:32px;
+  transition:.25s;
+  opacity:0;
+  transform:translateY(20px);
+}
+.job-card.in-view{ opacity:1; transform:translateY(0); }
+.job-card:hover{ box-shadow:var(--shadow); }
+.job-main h3{ font-size:1.2rem; color:var(--maroon-dark); margin-bottom:10px; }
+.job-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-bottom:12px;
+  font-size:.85rem;
+  color:var(--maroon);
+  font-weight:500;
+}
+.job-meta i{ margin-right:6px; color:var(--gold); }
+.job-main p{ color:var(--text-muted); font-size:.92rem; max-width:640px; }
+.job-apply-btn{ flex-shrink:0; white-space:nowrap; }
+
+/* ===== HIRING PROCESS ===== */
+.process{ padding:96px 0; background:var(--cream); }
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  margin-top:50px;
+}
+.process-step{
+  text-align:center;
+  padding:20px;
+}
+.process-num{
+  display:inline-block;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:2.2rem;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+.process-step h4{ font-size:1.05rem; color:var(--maroon-dark); margin-bottom:10px; }
+.process-step p{ color:var(--text-muted); font-size:.9rem; }
+
+/* ===== APPLICATION FORM ===== */
+.apply{ padding:96px 0; }
+.apply-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+.apply-content .lead,
+.apply-content p{ color:var(--text-muted); margin-bottom:20px; }
+.apply-points{ list-style:none; padding:0; margin:0; }
+.apply-points li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 0;
+  color:var(--maroon-dark);
+  font-weight:500;
+  border-bottom:1px solid var(--border);
+}
+.apply-points li:last-child{ border-bottom:none; }
+.apply-points i{
+  color:var(--white);
+  background:var(--maroon);
+  width:22px; height:22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.7rem;
+  flex-shrink:0;
+}
+.apply-form{
+  background:var(--white);
+  border-radius:14px;
+  padding:40px;
+  box-shadow:var(--shadow);
+  border-top:4px solid var(--gold);
+}
+.apply-form h3{ font-size:1.2rem; color:var(--maroon-dark); margin-bottom:20px; }
+.apply-form input,
+.apply-form select,
+.apply-form textarea{
+  width:100%;
+  padding:13px 16px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  margin-bottom:14px;
+  font-family:var(--font-body);
+  font-size:.95rem;
+  color:var(--text);
+  background:var(--cream);
+  resize:vertical;
+}
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  background:var(--white);
+}
+.apply-form .form-note{
+  margin-top:12px;
+  font-size:.85rem;
+  color:var(--maroon);
+  text-align:center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .why-work-grid{ grid-template-columns:1fr; }
+  .perks-grid{ grid-template-columns:1fr 1fr; }
+  .process-grid{ grid-template-columns:1fr 1fr; }
+  .apply-inner{ grid-template-columns:1fr; }
+  .job-card{ flex-direction:column; align-items:flex-start; }
+  .job-apply-btn{ width:100%; }
+}
+
+@media (max-width: 860px){
+  .page-banner h1{ font-size:2rem; }
+}
+
+@media (max-width: 600px){
+  .perks-grid{ grid-template-columns:1fr; }
+  .process-grid{ grid-template-columns:1fr; }
+  .why-work-badge{ width:80px; height:80px; font-size:.7rem; left:-14px; bottom:-14px; }
+  .apply-form{ padding:28px; }
+}
