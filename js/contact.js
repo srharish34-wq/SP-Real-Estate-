@@ -151,3 +151,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+// ===== Phone Number Validation (auto-added) =====
+document.addEventListener('input', function (e) {
+  if (e.target.matches('input[type="tel"], input[name="phone"]')) {
+    e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+  }
+});
+
+document.addEventListener('submit', function (e) {
+  const phoneInput = e.target.querySelector('input[type="tel"], input[name="phone"]');
+  if (!phoneInput) return;
+
+  const phoneRegex = /^[6-9]\d{9}$/;
+  const existingNote = e.target.querySelector('.form-note');
+
+  if (!phoneRegex.test(phoneInput.value.trim())) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (existingNote) {
+      existingNote.textContent = 'Please enter a valid 10-digit mobile number.';
+      existingNote.style.color = '#c0392b';
+    } else {
+      alert('Please enter a valid 10-digit mobile number.');
+    }
+    phoneInput.focus();
+  }
+}, true); // capture phase, runs before other submit listeners
