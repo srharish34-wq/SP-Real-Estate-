@@ -208,7 +208,9 @@
     <p>Fill in your details and our team will call you to schedule a visit.</p>
     <form id="bookingForm">
       <input type="text" name="name" placeholder="Your name" required>
-      <input type="tel" name="phone" placeholder="Phone number" required>
+     <input type="tel" name="phone" placeholder="Phone number" 
+       pattern="[6-9][0-9]{9}" maxlength="10" minlength="10" 
+       title="Enter a valid 10-digit Indian mobile number" required>
       <select name="project">
         <option value="">Select a project</option>
         <option>Daniel Avenue Thiruverkadu</option>
