@@ -585,7 +585,9 @@
         <h3>Send us an enquiry</h3>
         <div class="form-row">
           <input type="text" name="name" placeholder="Your name" required>
-          <input type="tel" name="phone" placeholder="Phone number" required>
+         <input type="tel" name="phone" placeholder="Phone number" 
+       pattern="[6-9][0-9]{9}" maxlength="10" minlength="10" 
+       title="Enter a valid 10-digit Indian mobile number" required>
         </div>
         <select name="interest">
           <option value="">I'm interested in&hellip;</option>
